@@ -1,0 +1,131 @@
+/* 
+NAV BAR 
+*/
+
+.header {
+    width: 300px;
+    z-index: 1;
+    min-width: 300px;
+    color:rgb(230, 126, 0);
+    background: linear-gradient(to bottom right,#222c46, #191e29, #0a0b0e);
+    border-right: 2px solid rgba(255, 255, 255, 0.623);
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left:0;
+}
+
+.title {
+    font-size: 3rem;
+    border-bottom: 2px solid rgb(230, 126, 0);
+    margin: 0.5em;
+    padding-left: 0.3em;
+    padding-bottom: 0.2em;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-title {
+    font-size: 1.5rem;;
+}
+.nav-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-item-link {
+    font-weight: bold;
+    margin: 1em;
+    padding: 0.6em;
+    font-size: 1rem;
+    width : 80%;
+    background: linear-gradient(to bottom right, rgb(230, 126, 0), rgb(131, 72, 0)) ;
+    color: #10131a;
+    border: 4px groove rgb(122, 65, 0);
+}
+
+.nav-item-link:hover {
+    background-image: linear-gradient(to top left, rgb(230, 126, 0), rgb(122, 65, 0));
+    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+a:visited {
+    text-decoration: none; 
+    color: black;
+    font-weight: bold;
+}
+
+.clip-me-reverse {
+    position:absolute;
+    width: 3px;
+    bottom:-15vh;
+    right: -1px;
+    height: 15vh;
+    background: linear-gradient(to top, rgba(255, 147, 6, 0) 0%, #ffffff 75%, #ffffff 100%);
+    animation: upside 3.5s 1.5s infinite ease-in-out;
+}
+
+@keyframes upside {
+    0% { transform: translateY(100vh)}
+    100% { transform: translateY(-105vh) }
+}
+
+@media (max-width: 900px) {
+    .header {
+        position:relative;
+        width:100%;
+        float:none;
+        margin-left:0;
+        height: 200px;
+        top:0;
+        left:0;
+        right:0;
+        bottom:auto;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.623);
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+    .nav-title {
+        display: none;
+    }
+    .nav-links {
+        flex-direction: row;
+        margin-top: auto;
+    }
+    .nav-item-link {
+        font-size: 0.8rem;
+    }
+
+    .clip-me-reverse {
+        position:absolute;
+        width: 10vh;
+        left: -15vh;
+        height: 3px;
+        bottom: -1px;
+        right: auto;
+        top: auto;
+        background: linear-gradient(to right, rgba(255, 147, 6, 0) 0%, #ffffff 75%, #ffffff 100%);
+        animation: upside 3.5s 1.5s infinite ease-in-out;
+    }
+
+    @keyframes upside {
+        0% { transform: translatex(0vh)}
+        100% { transform: translateX(105vh) }
+    }
+}

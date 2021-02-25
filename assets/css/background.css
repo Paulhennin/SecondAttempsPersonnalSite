@@ -1,0 +1,81 @@
+
+
+*{ 
+    box-sizing: border-box !important
+    }
+    
+    html, body, main {
+        height: 100%;
+        width: 100%;
+    }
+    
+    body {
+        font-family: sans-serif;
+        overflow: hidden;
+        position: relative;
+        font-size: 3rem;
+    }
+    
+    main {
+        background-color: #1a1e2b;
+        z-index: 0;
+        color: #000;
+        overflow: hidden;
+        left:300px;
+        right: 0;
+    }
+    
+    .lines {
+        display: flex;
+        justify-content: space-around;
+        height: 100%;
+        width: 100%;
+        padding: 0 15% 0 15%;
+    }
+    .line {
+        position:relative;
+        display: flex;
+        justify-content: center;
+        width: 1px;
+        height: 100%;
+        background: rgba(256, 155, 000, 0.1);
+        overflow: hidden;
+    }
+    
+    .clip-me1 {
+        position:absolute;
+        width: 15px;
+        top:-15vh;
+        height: 15vh;
+        background: linear-gradient(to bottom, rgba(255, 147, 6, 0) 0%, #ffae00 75%, #ffae00 100%);
+        animation: drop 3.5s 1s infinite ease-in-out;
+    }
+    
+    .clip-me2 {
+        position:absolute;
+        width: 15px;
+        top:-15vh;
+        height: 15vh;
+        background: linear-gradient(to bottom, rgba(255, 147, 6, 0) 0%, #ffae00 75%, #ffae00 100%);
+        animation: drop 3.5s 1.5s infinite ease-in-out;
+    }
+    
+    .clip-me3 {
+        position:absolute;
+        width: 15px;
+        top:-15vh;
+        height: 15vh;
+        background: linear-gradient(to bottom, rgba(255, 147, 6, 0) 0%, #ffae00 75%, #ffae00 100%);
+        animation: drop 3.5s 2s infinite ease-in-out;
+    }
+    
+    
+    @keyframes drop {
+        0% { transform: translateY(0)}
+        100% { transform: translateY(125vh) }
+    }
+    
+    
+    
+    @media (max-width: 900px) {
+    }
